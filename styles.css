@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&display=swap");
 
 * *::after,
 *::before {
@@ -11,14 +11,42 @@
   --primary-text-color: #111111;
   --secondary-text-color: #ffffff;
   --headline-color: #393939;
-  --primary-font-family: "Montserrat", sans-serif;
-  --secondary-font-family: "Roboto", sans-serif;
+  --secondary-font-family: "Montserrat", sans-serif;
+  --primary-font-family: "Roboto", sans-serif;
 }
 
 html {
   font-size: 16px;
 }
 
-body {
-  background-color: var(--primary-color);
+form {
+  display: grid;
+  grid-auto-flow: row;
+  font-family: var(--primary-font-family);
+  margin-left: 2.25em;
+}
+
+h2 {
+  color: var(--headline-color);
+  font-size: 3.9em;
+}
+
+input {
+  font-size: 3.9em;
+  border: none;
+  border-bottom: solid #342d2f 4px;
+  padding-bottom: 0.5em;
+}
+
+input[type="radio"]:checked + label {
+  color: var(--primary-color);
+}
+
+.radio {
+  font-size: 1.25em;
+  background-color: rgba(212, 212, 212, 0.1);
+}
+
+.radio-button {
+  display: none;
 }
