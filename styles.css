@@ -1,7 +1,16 @@
-*,
-*::after,
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+
+* *::after,
 *::before {
   box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #fe4775;
+  --secondary-color: #161060;
+  --primary-text-color: #111111;
+  --secondary-text-color: #ffffff;
+  --headline-color: #393939;
 }
 
 html {
@@ -9,5 +18,5 @@ html {
 }
 
 body {
-  background: black;
+  background-color: var(--primary-color);
 }
