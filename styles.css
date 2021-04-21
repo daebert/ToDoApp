@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
 :root {
   --primary-color: #fe4775;
   --secondary-color: #161060;
@@ -20,8 +23,18 @@ html {
   font-size: 16px;
 }
 
-body {
+h2 {
+  color: var(--headline-color);
+  font-size: 4rem;
+  align-self: end;
   margin: 0;
+  margin-left: 2.25rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  align-self: end;
+  margin-left: 2.25rem;
 }
 
 form {
@@ -32,31 +45,21 @@ form {
   height: 100vh;
 }
 
-h2 {
-  color: var(--headline-color);
-  font-size: 2rem;
-  align-self: end;
-  margin-left: 2.25rem;
-}
-
-h3 {
-  text-transform: uppercase;
-  align-self: end;
-  margin-left: 2.25rem;
-}
-
 .textentry {
   border: none;
-  border-bottom: solid #342d2f 4px;
-  padding-bottom: 0.5em;
+  border-bottom: solid rgba(52, 45, 47, 0.38) 4px;
   align-self: end;
   margin-left: 2.25rem;
-  height: 3rem;
+  font-size: 3rem;
+  height: 4rem;
+  padding: 0;
+  width: 100%;
 }
 
 input::placeholder {
   color: rgba (57, 57, 57, 0.21);
-  font-size: 2rem;
+  font-size: 3rem;
+  height: 4rem;
 }
 
 input[type="radio"]:checked + label {
@@ -87,4 +90,20 @@ input[type="radio"]:checked + label {
   font-size: 1.75em;
   border: none;
   width: 100%;
+}
+
+.radio-group__input:checked + .radio-group__label {
+  color: var(--primary-color);
+}
+
+.radio-group__input:focus-visible + .radio-group__label {
+  outline: thin solid;
+}
+
+.textentry:focus-visible {
+  color: var(primary-text-color);
+}
+
+.textentry:focus-visible {
+  outline: thin solid;
 }
