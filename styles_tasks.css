@@ -10,8 +10,8 @@
   margin: 0;
   height: 100vh;
   display: grid;
-  grid-template-columns: 5% 5% 65% 25%;
-  grid-template-rows: 15% 7.5% 62.5% 10%;
+  grid-template-columns: 5% 5% auto 6em;
+  grid-template-rows: 15% 7.5% auto 5em;
   font-family: var(--primary-font-family);
 }
 
@@ -67,14 +67,14 @@ h1 {
 }
 
 .checkbox-group {
-  grid-row: 3 / 4;
+  grid-row: 3 / 5;
   grid-column: 3 / 5;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 03em 2em 1em 1.5em;
+  padding: 03em 2em 5em 1.5em;
   row-gap: 2.5em;
-  margin: 0 1em 0 0;
+  margin: 0;
   background-color: rgba(212, 212, 212, 0.1);
 }
 
@@ -82,22 +82,12 @@ h1 {
   grid-row: 4 / 5;
   grid-column: 4 / 5;
   background-color: var(--primary-color);
-  display: flex;
-  height: 2.5em;
-  width: 2.5em;
-  align-self: center;
-  justify-self: center;
-  z-index: 1;
-}
-
-.actionbutton__background {
-  grid-row: 4 / 5;
-  grid-column: 4 / 5;
-  background-color: var(--primary-color);
-  height: 2.5em;
-  width: 2.5em;
-  padding: 3.5em;
+  background-image: url("image/Gruppe 14.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   border-top-left-radius: 1em;
+  padding: 2.5em;
+  margin: 0;
 }
 
 input[type="radio"]:checked + label {
