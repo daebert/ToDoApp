@@ -12,33 +12,33 @@
       <h2>Add new</h2>
       <input type="text" placeholder="Enter Task" class="textentry" />
       <h3>When</h3>
-      <section class="radio">
+      <section class="radio-group">
         <input
           type="radio"
           name="date"
           value="today"
           id="today"
-          class="radio-button"
+          class="radio-group__input"
         />
-        <label for="today">Today</label>
+        <label class="radio-group__label" for="today">Today</label>
 
         <input
           type="radio"
           name="date"
           value="tomorrow"
           id="tomorrow"
-          class="radio-button"
+          class="radio-group__input"
         />
-        <label for="tomorrow">Tomorrow</label>
+        <label class="radio-group__label" for="tomorrow">Tomorrow</label>
 
         <input
           type="radio"
           name="date"
           value="selectdate"
           id="selectdate"
-          class="radio-button"
+          class="radio-group__input"
         />
-        <label for="selectdate">Select Date</label>
+        <label class="radio-group__label" for="selectdate">Select Date</label>
       </section>
       <input type="submit" value="Add Task" class="submit" />
     </form>
