@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: 10% 20% 60% 10%;
+}
+
+:root {
+  --primary-color: #fe4775;
+  --secondary-color: #161060;
+  --primary-text-color: #111111;
+  --secondary-text-color: #ffffff;
+  --headline-color: #393939;
+  --primary-font-family: "Roboto", sans-serif;
+  --secondary-font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+.burgermenu {
+  grid-column: 1 / 2;
+  background-color: #ffffff;
+  border: none;
+}
+
+.bell {
+  background-color: #ffffff;
+  border: none;
+}
+
+.topbar {
+  grid-column: 1 / 2;
+  display: flex;
+}
+
+.radio-group {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  margin: 0;
+  padding: 0;
+  transform: rotate(-90deg);
+}
+
+.checkbox-group {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+}
+
+.actionbutton {
+  grid-row: 4 / 5;
+  grid-column: 2 / 3;
+}
+
+input[type="radio"]:checked + label {
+  color: var(--primary-color);
+}
+
+.radio-group__input {
+  opacity: 0;
+  position: absolute;
+}
+
+.radio-group__input {
+  align-self: left;
+}
