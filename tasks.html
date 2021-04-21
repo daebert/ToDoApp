@@ -7,25 +7,95 @@
     <title>Document</title>
   </head>
   <body>
-    <!--Burger Menu-->
-    <!--Bell-->
+    <section class="burgermenu">Burger</section>
+    <section><a href=""></a></section>
     <h1>Tasks</h1>
-    <section>
-      <ul>
-        <li>Book appointment with</li>
-        <li>Upload today shot on Dribble</li>
-        <li>Complete the Elephant Illustration</li>
-        <li>Buy Cake for Clair's Birthday</li>
-        <li>Attend UX Conference with Jared</li>
-      </ul>
-    </section>
 
-    <section>
-      <button>Today</button>
-      <button>Tomorrow</button>
-      <button>This week</button>
-    </section>
+    <!-- Checkbox Start -->
+    <section class="checkbox-group">
+      <input
+        type="checkbox"
+        name="task"
+        id="task1"
+        class="checkbox-group__input"
+      />
+      <label class="checkbox-group__label" for="task1"
+        >Book appointment with</label
+      >
 
-    <!--Bel
+      <input
+        type="checkbox"
+        name="task"
+        id="task2"
+        class="checkbox-group__input"
+      />
+      <label class="checkbox-group__label" for="task2"
+        >Upload today shot on Dribble</label
+      >
+
+      <input
+        type="checkbox"
+        name="task"
+        id="task3"
+        class="checkbox-group__input"
+      />
+      <label class="checkbox-group__label" for="task3"
+        >Complete the Elephant Illustration</label
+      >
+
+      <input
+        type="checkbox"
+        name="task"
+        id="task4"
+        class="checkbox-group__input"
+      />
+      <label class="checkbox-group__label" for="task4"
+        >Buy Cake for Clair's Birthday</label
+      >
+
+      <input
+        type="checkbox"
+        name="task"
+        id="task5"
+        class="checkbox-group__input"
+      />
+      <label class="checkbox-group__label" for="task5"
+        >Attend UX Conference with Jared</label
+      >
+    </section>
+    <!-- Checkbox End -->
+
+    <!-- Radio-Button Start -->
+    <section class="radio-group">
+      <input
+        type="radio"
+        name="date"
+        value="today"
+        id="today"
+        class="radio-group__input"
+      />
+      <label class="radio-group__label" for="today">Today</label>
+
+      <input
+        type="radio"
+        name="date"
+        value="tomorrow"
+        id="tomorrow"
+        class="radio-group__input"
+      />
+      <label class="radio-group__label" for="tomorrow">Tomorrow</label>
+
+      <input
+        type="radio"
+        name="date"
+        value="thisweek"
+        id="thisweek"
+        class="radio-group__input"
+      />
+      <label class="radio-group__label" for="thisweek">This week</label>
+    </section>
+    <!-- Radio-Button End -->
+
+    <input type="submit" value="Add" class="submit" />
   </body>
 </html>
