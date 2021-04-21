@@ -10,8 +10,9 @@
   margin: 0;
   height: 100vh;
   display: grid;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 5% 5% 65% 25%;
   grid-template-rows: 10% 20% 60% 10%;
+  font-family: var(--primary-font-family);
 }
 
 :root {
@@ -29,41 +30,75 @@ html {
 }
 
 .burgermenu {
-  grid-column: 1 / 2;
+  grid-column: 2 / 3;
   background-color: #ffffff;
   border: none;
+  text-align: left;
 }
 
 .bell {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
   background-color: #ffffff;
   border: none;
+  padding-left: 3em;
 }
 
-.topbar {
-  grid-column: 1 / 2;
+h1 {
+  grid-column: 1 / 5;
   display: flex;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
 }
 
 .radio-group {
   grid-row: 3 / 4;
-  grid-column: 1 / 2;
+  grid-column: 2 / 3;
   margin: 0;
   padding: 0;
-  transform: rotate(-90deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .checkbox-group {
   grid-row: 3 / 4;
-  grid-column: 2 / 3;
+  grid-column: 3 / 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1em 2em 1em 1.5em;
 }
 
 .actionbutton {
   grid-row: 4 / 5;
-  grid-column: 2 / 3;
+  grid-column: 4 / 5;
+  background-color: var(--primary-color);
+  display: flex;
+  height: 2.5em;
+  width: 2.5em;
+  align-self: center;
+  justify-self: center;
+  z-index: 1;
+}
+
+.actionbutton__background {
+  grid-row: 4 / 5;
+  grid-column: 4 / 5;
+  background-color: var(--primary-color);
+  height: 2.5em;
+  width: 2.5em;
+  padding: 3.5em;
+  border-top-left-radius: 1em;
 }
 
 input[type="radio"]:checked + label {
   color: var(--primary-color);
+}
+
+.radio-group__label {
+  transform: rotate(270deg);
+  color: lightgray;
 }
 
 .radio-group__input {
@@ -73,4 +108,14 @@ input[type="radio"]:checked + label {
 
 .radio-group__input {
   align-self: left;
+}
+
+.checkbox-group__input {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-group__label {
+  font-size: 1.3em;
+  width: 100%;
 }
