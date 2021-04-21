@@ -32,10 +32,10 @@ h2 {
 }
 
 h3 {
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
-input {
+.textentry {
   font-size: 3.9em;
   border: none;
   border-bottom: solid #342d2f 4px;
@@ -48,6 +48,8 @@ input[type="radio"]:checked + label {
 
 .radio {
   background-color: rgba(212, 212, 212, 0.1);
+  display: flex;
+  justify-content: space-around;
 }
 
 .radio-button {
@@ -55,8 +57,9 @@ input[type="radio"]:checked + label {
   display: none;
 }
 
-.task {
+.submit {
   background-color: var(--primary-color);
   color: var(--secondary-text-color);
   font-size: 1.75em;
+  border: none;
 }
