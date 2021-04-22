@@ -10,8 +10,8 @@
   margin: 0;
   height: 100vh;
   display: grid;
-  grid-template-columns: 5% 5% auto 6em;
-  grid-template-rows: 15% 7.5% auto 5em;
+  grid-template-columns: 5% 5% 1fr 6em;
+  grid-template-rows: 15% 7.5% 1fr 5em;
   font-family: var(--primary-font-family);
 }
 
