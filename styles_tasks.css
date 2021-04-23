@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 5% 5% 1fr 6em;
+  grid-template-rows: 15% 7.5% 1fr 5em;
+  font-family: var(--primary-font-family);
+}
+
+:root {
+  --primary-color: #fe4775;
+  --secondary-color: #161060;
+  --primary-text-color: #111111;
+  --secondary-text-color: #ffffff;
+  --headline-color: #393939;
+  --primary-font-family: "Roboto", sans-serif;
+  --secondary-font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+.burgermenu {
+  grid-column: 2 / 3;
+  background-color: #ffffff;
+  border: none;
+  text-align: left;
+}
+
+h1 {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  justify-self: start;
+  margin: 0;
+}
+
+.bell {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+  align-self: start;
+  background-color: #ffffff;
+  border: none;
+  padding-left: 3em;
+}
+
+/* Radio-Button Start */
+
+.radio-group {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.radio-group__label {
+  color: rgba(0, 0, 0, 0.2);
+  transform: rotate(270deg);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.radio-group__input {
+  opacity: 0;
+  position: absolute;
+}
+
+input[type="radio"]:checked + label {
+  color: var(--primary-color);
+}
+
+/* Radio-Button End */
+
+/* Checkbox Start */
+
+.checkbox-group {
+  grid-row: 3 / 5;
+  grid-column: 3 / 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 03em 2em 5em 1.5em;
+  row-gap: 2.5em;
+  margin: 0;
+  background-color: rgba(212, 212, 212, 0.1);
+}
+
+.checkbox-group__input {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-group__label {
+  font-size: 1.3em;
+  width: 100%;
+}
+
+.checkbox-group__label--line-through {
+  color: var(--primary-text-color);
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: var(--primary-color);
+}
+
+/* Checkbox End */
+
+.refbutton {
+  grid-row: 4 / 5;
+  grid-column: 4 / 5;
+  background-color: var(--primary-color);
+  background-image: url("image/Gruppe 14.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 1em;
+  padding: 2.5em;
+  margin: 0;
+}
