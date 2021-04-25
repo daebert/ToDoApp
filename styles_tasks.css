@@ -30,10 +30,21 @@ html {
 }
 
 .burgermenu {
+  opacity: 0;
+  position: absolute;
+}
+
+.burgermenu__label {
   grid-column: 2 / 3;
   background-color: #ffffff;
   border: none;
   text-align: left;
+  align-self: end;
+}
+
+.burgermenu:checked ~ .menu-page {
+  left: 0;
+  transition: left 0.5s;
 }
 
 h1 {
@@ -127,4 +138,62 @@ input[type="checkbox"]:checked + label {
   border-top-left-radius: 1em;
   padding: 2.5em;
   margin: 0;
+}
+
+/* Menu-Page Start */
+
+.menu-page {
+  display: grid;
+  grid-template-columns: 90% 1fr;
+  grid-template-rows: auto 4fr 6fr;
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary-color);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  color: var(--secondary-text-color);
+}
+
+.menu-page__header h4 {
+  text-transform: uppercase;
+  padding-top: 2em;
+  padding-left: 2.5em;
+  margin: 0;
+}
+
+.menu-page__content {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.menu-page__content ul {
+  list-style-type: none;
+  font-size: 2em;
+  display: flex;
+  row-gap: 1em;
+  flex-direction: column;
+}
+
+.menu-page__footer {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+.menu-page__footer ul {
+  list-style-type: none;
+  display: flex;
+  row-gap: 2em;
+  flex-direction: column;
+  padding-top: 2em;
+}
+
+.menu-page__header-button {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  background-image: url("image/Line.png");
+  background-repeat: no-repeat;
+  margin: 0;
+  align-self: end;
 }

@@ -8,9 +8,34 @@
     <title>Document</title>
   </head>
   <body class="body">
-    <button class="burgermenu">
-      <a><img src="./image/Cartotmenu.png" /></a>
-    </button>
+    <input type="checkbox" class="burgermenu" id="burgermenu" />
+    <label class="burgermenu__label" for="burgermenu"
+      ><img src="./image/Cartotmenu.png"
+    /></label>
+    <div class="menu-page">
+      <section class="menu-page__header">
+        <h4>Task App</h4>
+      </section>
+      <label class="menu-page__header-button" for="burgermenu"
+        ><img src="image/Line-1.png"
+      /></label>
+      <section class="menu-page__content">
+        <ul>
+          <li>Dashboard</li>
+          <li>Calender</li>
+          <li>Categorize Tasks</li>
+          <li>Setting</li>
+        </ul>
+      </section>
+      <section class="menu-page__footer">
+        <ul>
+          <li>About</li>
+          <li>Privacy Policy</li>
+          <li>License</li>
+        </ul>
+      </section>
+    </div>
+
     <h1>Tasks</h1>
     <button class="bell">
       <a><img src="./image/notif.png" /></a>
@@ -104,6 +129,6 @@
     </section>
     <!-- Checkbox End -->
 
-    <a class="refbutton" href="new.html"></a>
+    <a class="refbutton"></a>
   </body>
 </html>
