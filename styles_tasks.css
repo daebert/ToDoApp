@@ -30,10 +30,23 @@ html {
 }
 
 .burgermenu {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.burgermenu__label {
   grid-column: 2 / 3;
   background-color: #ffffff;
   border: none;
   text-align: left;
+  align-self: end;
+  height: 2em;
+  width: 2em;
+}
+
+.burgermenu:checked ~ .menu-page {
+  left: 0;
 }
 
 h1 {
@@ -53,7 +66,6 @@ h1 {
 }
 
 /* Radio-Button Start */
-
 .radio-group {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
@@ -79,11 +91,9 @@ h1 {
 input[type="radio"]:checked + label {
   color: var(--primary-color);
 }
-
 /* Radio-Button End */
 
 /* Checkbox Start */
-
 .checkbox-group {
   grid-row: 3 / 5;
   grid-column: 3 / 5;
@@ -114,17 +124,68 @@ input[type="checkbox"]:checked + label {
   text-decoration: line-through;
   color: var(--primary-color);
 }
-
 /* Checkbox End */
 
 .refbutton {
   grid-row: 4 / 5;
   grid-column: 4 / 5;
   background-color: var(--primary-color);
-  background-image: url("image/Gruppe 14.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border-top-left-radius: 1em;
-  padding: 2.5em;
+  padding: 1em 2em;
+}
+
+/* Menu-Page Start */
+.menu-page {
+  display: grid;
+  grid-template-columns: 90% 1fr;
+  grid-template-rows: auto 4fr 6fr;
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary-color);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  color: var(--secondary-text-color);
+  transition: left 0.5s;
+}
+
+.menu-page__header h4 {
+  text-transform: uppercase;
+  padding-top: 2em;
+  padding-left: 2.5em;
   margin: 0;
 }
+
+.menu-page__content {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.menu-page__content ul {
+  list-style-type: none;
+  font-size: 2em;
+  display: flex;
+  row-gap: 1em;
+  flex-direction: column;
+}
+
+.menu-page__footer {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+.menu-page__footer ul {
+  list-style-type: none;
+  display: flex;
+  row-gap: 2em;
+  flex-direction: column;
+  padding-top: 2em;
+}
+
+.menu-page__header-button {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  align-self: end;
+}
+/* Menu-Page End */

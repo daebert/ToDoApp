@@ -8,12 +8,40 @@
     <title>Document</title>
   </head>
   <body class="body">
-    <button class="burgermenu">
-      <a><img src="./image/Cartotmenu.png" /></a>
-    </button>
+    <input type="checkbox" class="burgermenu" id="burgermenu" />
+    <label class="burgermenu__label" for="burgermenu"
+      ><img src="./image/Cartot menu.svg"
+    /></label>
+
+    <!-- Menu Page Start-->
+    <section class="menu-page">
+      <section class="menu-page__header">
+        <h4>Task App</h4>
+      </section>
+      <label class="menu-page__header-button" for="burgermenu"
+        ><img src="image/Line.svg"
+      /></label>
+      <section class="menu-page__content">
+        <ul>
+          <li>Dashboard</li>
+          <li>Calender</li>
+          <li>Categorize Tasks</li>
+          <li>Setting</li>
+        </ul>
+      </section>
+      <section class="menu-page__footer">
+        <ul>
+          <li>About</li>
+          <li>Privacy Policy</li>
+          <li>License</li>
+        </ul>
+      </section>
+    </section>
+    <!-- Menu Page End -->
+
     <h1>Tasks</h1>
     <button class="bell">
-      <a><img src="./image/notif.png" /></a>
+      <a><img src="./image/notif.svg" /></a>
     </button>
 
     <!-- Radio-Button Start -->
@@ -104,6 +132,51 @@
     </section>
     <!-- Checkbox End -->
 
-    <a class="refbutton" href="new.html"></a>
+    <section class="refbutton">
+      <!-- SVG Cross Start -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+      >
+        <defs>
+          <style>
+            .a {
+              fill: #fff;
+            }
+            .b {
+              fill: #fe4775;
+            }
+          </style>
+        </defs>
+        <g transform="translate(-168 -762)">
+          <circle
+            class="a"
+            cx="20"
+            cy="20"
+            r="20"
+            transform="translate(168 762)"
+          />
+          <g transform="translate(-12.273 1)">
+            <rect
+              class="b"
+              width="3.042"
+              height="15.805"
+              rx="1.521"
+              transform="translate(198.655 773.597)"
+            />
+            <rect
+              class="b"
+              width="3.042"
+              height="15.805"
+              rx="1.521"
+              transform="translate(192.273 783.021) rotate(-90)"
+            />
+          </g>
+        </g>
+      </svg>
+      <!-- SVG Cross Start -->
+    </section>
   </body>
 </html>
