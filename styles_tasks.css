@@ -32,6 +32,7 @@ html {
 .burgermenu {
   opacity: 0;
   position: absolute;
+  pointer-events: none;
 }
 
 .burgermenu__label {
@@ -44,7 +45,6 @@ html {
 
 .burgermenu:checked ~ .menu-page {
   left: 0;
-  transition: left 0.5s;
 }
 
 h1 {
@@ -154,6 +154,7 @@ input[type="checkbox"]:checked + label {
   top: 0;
   left: -100%;
   color: var(--secondary-text-color);
+  transition: left 0.5s;
 }
 
 .menu-page__header h4 {
