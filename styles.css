@@ -89,7 +89,6 @@ input[type="radio"]:checked + label {
   color: var(--secondary-text-color);
   font-size: 1.75em;
   border: none;
-  width: 100%;
 }
 
 .radio-group__input:checked + .radio-group__label {
