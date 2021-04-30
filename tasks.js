@@ -44,14 +44,26 @@ taskGroupElement.append(...taskElements);
 //   }
 // }
 
-function createTaskList(radioButtonDate) {
-  taskList.filter(function (task) {
-    console.log(task.date === radioButtonDate);
+function createTaskList(date) {
+  const filteredTaskList = taskList.filter(function (task) {
+    return task.date === date;
   });
+  // Create taskElements array consisting of HTML elements based on the amount of objects
+  const taskElements = filteredTaskList.map(function (task) {
+    return checkboxGroup(task.name);
+  });
+
+  // get parent element of tasks
+  const taskGroupElement = document.querySelector(".checkbox-group");
+
+  taskGroupElement.innerHTML = "";
+
+  // Append all elements in taskElement to task group
+  taskGroupElement.append(...taskElements);
 }
 
-// if createTaskList (Boolean) {
-//   console.log
+// taskList.map(function (task) {
+//  if (checkboxGroup(task.date) === radioButtonDate)};
 
 const radioButtons = document.querySelectorAll(".radio-group__input");
 radioButtons.forEach(
