@@ -46,7 +46,13 @@
 
     <!-- Radio-Button Start -->
     <section class="radio-group">
-      <input type="radio" name="date" id="today" class="radio-group__input" />
+      <input
+        type="radio"
+        name="date"
+        id="today"
+        value="today"
+        class="radio-group__input"
+      />
 
       <label class="radio-group__label" for="today">Today</label>
 
@@ -54,6 +60,7 @@
         type="radio"
         name="date"
         id="tomorrow"
+        value="tomorrow"
         class="radio-group__input"
       />
       <label class="radio-group__label" for="tomorrow">Tomorrow</label>
@@ -62,6 +69,7 @@
         type="radio"
         name="date"
         id="thisweek"
+        value="thisweek"
         class="radio-group__input"
       />
       <label class="radio-group__label" for="thisweek">This week</label>
@@ -106,7 +114,7 @@
         ></label
       >
 
-      <input
+      <!-- <input
         type="checkbox"
         name="task"
         id="task4"
@@ -128,7 +136,7 @@
         ><span class="checkbox-group__label--line-through"
           >Attend UX Conference with Jared</span
         ></label
-      >
+      > -->
     </section>
     <!-- Checkbox End -->
 
@@ -180,5 +188,6 @@
       </a>
       <!-- SVG Cross Start -->
     </section>
+    <script src="tasks.js" defer></script>
   </body>
 </html>
