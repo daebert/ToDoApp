@@ -13,8 +13,57 @@ function checkboxGroup(taskName) {
   return label;
 }
 
-const heatTeaElement = checkboxGroup("Tee kochen");
-const drinkTeaElement = checkboxGroup("Tee trinken");
+function parseJSONFromLocalStorage(key, defaultValue) {
+  const json = localStorage.getItem(key);
+  if (json === null) {
+    return defaultValue;
+  }
+  const data = JSON.parse(json);
+  return data;
+}
 
+// Get array with task objects rom localStorage
+const taskList = parseJSONFromLocalStorage("taskList", []);
+
+// Create taskElements array consisting of HTML elements based on the amount of objects
+const taskElements = taskList.map(function (task) {
+  return checkboxGroup(task.name);
+});
+
+// get parent element of tasks
 const taskGroupElement = document.querySelector(".checkbox-group");
-taskGroupElement.append(heatTeaElement, drinkTeaElement);
+
+// Append all elements in taskElement to task group
+taskGroupElement.append(...taskElements);
+
+// function dateChoice() {
+//   if (document.querySelector(".radio-group__input:checked").value === null) {
+//     return;
+//   } else {
+//     console.log(document.querySelector(".radio-group__input:checked").value);
+//   }
+// }
+
+function createTaskList(radioButtonDate) {
+  taskList.filter(function (task) {
+    console.log(task.date === radioButtonDate);
+  });
+}
+
+// if createTaskList (Boolean) {
+//   console.log
+
+const radioButtons = document.querySelectorAll(".radio-group__input");
+radioButtons.forEach(
+  (radioButton = (radioButton) =>
+    (radioButton.onchange = (e) => createTaskList(radioButton.value)))
+);
+
+//
+// });
+
+// // const taskDate = taskList.map(function (task) {
+// //   return checkboxGroup(task.date);
+// // });
+
+// // createTaskList
