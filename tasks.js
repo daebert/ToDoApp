@@ -1,16 +1,34 @@
-function checkboxGroup(taskName) {
+function checkboxGroup(task) {
   const label = document.createElement("label");
   const input = document.createElement("input");
   const span = document.createElement("span");
 
   input.type = "checkbox";
   input.className = "checkbox-group__input";
+  input.checked = task.completed;
+  input.onchange = function () {
+    completeTask(task.name, input.checked);
+  };
 
   span.className = "checkbox-group__label--line-through";
-  span.innerText = taskName;
+  span.innerText = task.name;
 
   label.append(input, span);
   return label;
+}
+
+function stringifyJSONToLocalStorage(key, value) {
+  const json = JSON.stringify(value);
+  localStorage.setItem(key, json);
+}
+
+function completeTask(taskName, completed) {
+  const taskList = parseJSONFromLocalStorage("taskList", []);
+  const task = taskList.find(function (task) {
+    return task.name === taskName;
+  });
+  task.completed = completed;
+  stringifyJSONToLocalStorage("taskList", taskList);
 }
 
 function parseJSONFromLocalStorage(key, defaultValue) {
@@ -26,9 +44,7 @@ function parseJSONFromLocalStorage(key, defaultValue) {
 const taskList = parseJSONFromLocalStorage("taskList", []);
 
 // Create taskElements array consisting of HTML elements based on the amount of objects
-const taskElements = taskList.map(function (task) {
-  return checkboxGroup(task.name);
-});
+const taskElements = taskList.map(checkboxGroup);
 
 // get parent element of tasks
 const taskGroupElement = document.querySelector(".checkbox-group");
@@ -49,9 +65,7 @@ function createTaskList(date) {
     return task.date === date;
   });
   // Create taskElements array consisting of HTML elements based on the amount of objects
-  const taskElements = filteredTaskList.map(function (task) {
-    return checkboxGroup(task.name);
-  });
+  const taskElements = filteredTaskList.map(checkboxGroup);
 
   // get parent element of tasks
   const taskGroupElement = document.querySelector(".checkbox-group");

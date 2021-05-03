@@ -42,6 +42,7 @@ formElement.onsubmit = function (event) {
   const task = {
     name: taskNameInput.value,
     date: taskDateInput.value,
+    completed: false,
   };
 
   const taskList = parseJSONFromLocalStorage("taskList", []);
